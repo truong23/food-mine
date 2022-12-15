@@ -7,7 +7,7 @@ export interface LatLng{
     lng: string;
 }
 
-export const LatLngSchema = new Schema(
+export const LatLngSchema = new Schema<LatLng>(
     {
         lat: {type: String, required: true},
         lng: {type: String, required: true}
@@ -29,7 +29,7 @@ export const OrderItemSchema = new Schema<OrderItem>(
 )
 
 export interface Order{
-    id:number;
+    id:string;
     items: OrderItem[];
     name: string;
     totalPrice: number;
